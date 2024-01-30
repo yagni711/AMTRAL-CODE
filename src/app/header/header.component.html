@@ -11,15 +11,16 @@
 
                     <div class="col-lg-6 col-md-6">
                         <div class="header-buttons">
-                            <a class="header-btn btn-border">Register</a>
-                            <a class="header-btn">Login</a>
+                            <a class="header-btn " [ngClass]="{'btn-border': currentUrl === '/register'}" [routerLink]="['/register']">Register</a>
+                            <a class="header-btn " [ngClass]="{'btn-border': currentUrl === '/login'}" [routerLink]="['/login']">Login</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="header-section section">
+        <ng-container *ngIf="data.showHeaderFooter">
+        <div class="header-section section" >
             <div class="container">
                 <div class="row align-items-center">
 
@@ -72,7 +73,7 @@
                                 </ul>
                             </nav>
                             <div id="search-overlay-trigger" class="search-icon">
-                                <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
+                                <a ><i class="fa fa-search"></i></a>
                             </div>
                         </div>
                     </div>
@@ -83,6 +84,7 @@
                 </div>
             </div>
         </div>
+        </ng-container>
         <!-- Header Section End -->
     </header>
 
