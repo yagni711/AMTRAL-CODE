@@ -29,19 +29,25 @@
                 <div class="login-register-wrapper">
                     <div class="from-box text-center">
                         <form action="#" class="login-register-wrap">
-                            <h3>Login</h3>
+                            <h3>Register</h3>
                             <div class="input-box mb-25">
-                                <input type="text" placeholder="User name or Email">
+                                <input type="text" placeholder="First Name">
                             </div>
                             <div class="input-box mb-25">
-                                <input type="text" placeholder="Password">
+                                <input type="text" placeholder="Last Name">
                             </div>
-                            <div class="tabs__checkbox mt-30">
+                            <div class="input-box mb-25">
+                                <input type="email" placeholder="Email">
+                            </div>
+                            <div class="input-box mb-25">
+                                <input type="password" placeholder="Password">
+                            </div>
+                            <!-- <div class="tabs__checkbox mt-30">
                                 <input type="checkbox">
                                 <span> Keep me Loggedin</span>
-                            </div>
-                            <a class="btn btn-circle mt-35">LOGIN</a>
-                            <a class="forget mt-20">Forgot Password?</a>
+                            </div> -->
+                            <a class="btn btn-circle mt-35">Register</a>
+                            <!-- <a href="#" class="forget mt-20">Forgot Password?</a> -->
                         </form>
                     </div>
                 </div>
@@ -52,7 +58,7 @@
                     <div class="contents-box text-center">
                         <h4>Already have an Account?</h4>
                         <p>Create a free account now</p>
-                        <a [routerLink]="['/register']" class="btn  btn-circle mt-15">Register</a>
+                        <a [routerLink]="['/login']" class="btn  btn-circle mt-15">Login</a>
                     </div>
                 </div>
             </div>
