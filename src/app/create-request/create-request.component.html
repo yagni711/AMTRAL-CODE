@@ -1,0 +1,136 @@
+<!-- <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+    {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+  </button> -->
+
+  <div class="hero-section section" >
+    <mat-stepper linear #stepper>
+        <!-- [linear]="isLinear" -->
+
+        <!-- Form 1 -->
+        <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Basic info</ng-template>
+            <div>
+                <label id="example-radio-group-label">Crew Type </label>
+                <mat-radio-group aria-labelledby="example-radio-group-label" formControlName="crewType" class="example-radio-group">
+                    <label  class="radio-inline"></label>
+                    <mat-radio-button id="{{crew}}"  *ngFor="let crew of crewTypeList" class="example-radio-button"  [value]="crew.value" >
+                        {{crew.value}}
+                    </mat-radio-button>
+                </mat-radio-group>
+            </div>
+
+            <mat-form-field>
+                <mat-label>Zone</mat-label>
+                <mat-select formControlName="zone"  name="zone">
+                  @for (zone of zoneList; track zone) {
+                    <mat-option [value]="zone.value">{{zone.value}}</mat-option>
+                  }
+                </mat-select>
+            </mat-form-field>
+
+            <br>
+            
+            <mat-form-field>
+                <textarea matInput 
+                   placeholder="Comment" 
+                   formControlName="comments"
+                   (change)="onCommentChange()">
+                </textarea>
+            </mat-form-field> 
+            <div>
+            <button mat-button matStepperNext>Next</button>
+            </div>
+        </form>
+        </mat-step>
+
+        <!-- Form 2 -->
+        <mat-step [stepControl]="secondFormGroup" label="Train Schedule">
+        <form [formGroup]="secondFormGroup">
+            <mat-form-field>
+            <mat-label>Address</mat-label>
+            <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
+            </mat-form-field>
+            <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+            </div>
+        </form>
+        </mat-step>
+
+        <!-- Form 3 -->
+        <mat-step [stepControl]="thirdFormGroup" label="Configure Param">
+            <form [formGroup]="thirdFormGroup">
+            <mat-form-field>
+                <mat-label>Address</mat-label>
+                <input matInput formControlName="thirdCtrl" placeholder="sample" required>
+            </mat-form-field>
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext>Next</button>
+            </div>
+            </form>
+        </mat-step>
+
+        <!-- Form 4 -->
+        <mat-step [stepControl]="forthFormGroup" label="Configure Rule">
+            <form [formGroup]="forthFormGroup">
+            <mat-form-field>
+                <mat-label>Address</mat-label>
+                <input matInput formControlName="forthCtrl" placeholder="sample" required>
+            </mat-form-field>
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext>Next</button>
+            </div>
+            </form>
+        </mat-step>
+
+        <!-- Form 5 -->
+        <mat-step [stepControl]="fifthFormGroup" label="Couplet & Job O/P">
+            <form [formGroup]="fifthFormGroup">
+            <mat-form-field>
+                <mat-label>Address</mat-label>
+                <input matInput formControlName="fifthCtrl" placeholder="sample"
+                    required>
+            </mat-form-field>
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                
+                <button mat-button (click)="submit()">Submit</button>
+            </div>
+            <div>
+                <button mat-button (click)="stepper.reset()">Reset</button>
+            </div>
+            </form>
+        </mat-step>
+
+    <!-- <mat-step>
+        <ng-template matStepLabel>Configure Rule</ng-template>
+        <p>Configure Rule</p>
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+        </mat-step>
+        <mat-step>
+            <ng-template matStepLabel>Configure O/P</ng-template>
+            <p>Configure O/P</p>
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext>Next</button>
+            </div>
+        </mat-step>
+        <mat-step>
+            <ng-template matStepLabel>Done</ng-template>
+            <p>You are now done.</p>
+            <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="stepper.reset()">Reset</button>
+            </div>
+        </mat-step> -->
+    </mat-stepper>
+  </div>
+
+     
+
