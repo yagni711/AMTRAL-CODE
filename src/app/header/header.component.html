@@ -1,97 +1,106 @@
 <!-- Header Section Start -->
-     <header class="header-wrapper section">
-        <div class="header-top bg-theme-two section">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="header-top-info">
-                            <p class="text-white">Call us - <a href="tel:21548987658">21548 987 658</a></p>
+    <ng-container *ngIf="data.showHeaderFooter">
+        <header class="header-wrapper section">
+            <div class="header-top bg-theme-two section">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="header-top-info">
+                                <!-- <p class="text-white">Call us - <a href="tel:21548987658">21548 987 658</a></p> -->
+                                <a style="color: white; font-weight: bolder; font-size: 16px;" [routerLink]="['/dashboard']">Crew Optimaization</a>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="col-lg-6 col-md-6">
-                        <div class="header-buttons">
-                            <a class="header-btn " [ngClass]="{'btn-border': currentUrl === '/register'}" [routerLink]="['/register']">Register</a>
-                            <a class="header-btn " [ngClass]="{'btn-border': currentUrl === '/login'}" [routerLink]="['/login']">Login</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <ng-container *ngIf="data.showHeaderFooter">
-        <div class="header-section section" >
-            <div class="container">
-                <div class="row align-items-center">
-
-                    <div class="col-lg-2 col-6">
-                        <div class="header-logo">
-                            <a ><img src="https://www.amtrak.com/content/dam/projects/dotcom/english/public/images/logos/guest-rewards-logo.svg" height="50" width="300" alt=""></a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-10 col-6">
-                        <div class="header-mid_right-bar">
-                            <nav class="main-menu d-lg-block d-none">
-                                <ul>
-                                    <li class="has-dropdown"><a>Home</a>
-                                        <ul class="sub-menu">
-                                            <li><a>Home one</a></li>
-                                            <li><a>Home two</a></li>
-                                            <li><a>Home three</a></li>
-                                            <li><a>Home Four</a></li>
-                                            <li><a>Home Five</a></li>
-                                            <li><a>Home Six</a></li>
-                                            <li><a>Home Seven</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="has-dropdown"><a>Services</a>
-                                        <ul class="sub-menu">
-                                            <li><a>Services</a></li>
-                                            <li><a>Single Services</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a>Features</a></li>
-                                    <li class="has-dropdown"><a href="#">Pages</a>
-                                        <ul class="sub-menu">
-                                            <li class="has-dropdown menu-item-has-children"><a>Blog Page</a>
-                                                <ul class="sub-menu">
-                                                    <li><a>Blog Page</a></li>
-                                                    <li><a>Blog Left Sidebar</a></li>
-                                                    <li><a>Blog Right Sidebar</a></li>
-                                                    <li><a>Blog Details</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a>About Page</a></li>
-                                            <li><a>Create agency</a></li>
-                                            <li><a>Login Page</a></li>
-                                            <li><a>Register Page</a></li>
-                                        </ul>
-                                    </li>
-                                  
-                                    <li><a>Contact</a></li>
-                                </ul>
-                            </nav>
-                            <div id="search-overlay-trigger" class="search-icon">
-                                <a ><i class="fa fa-search"></i></a>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="header-buttons">
+                                <!-- <a class="header-btn " [ngClass]="{'btn-border': currentUrl === '/register'}" [routerLink]="['/register']">Register</a>
+                                <a class="header-btn " [ngClass]="{'btn-border': currentUrl === '/login'}" [routerLink]="['/login']">Login</a> -->
+                                <a class="header-btn ">View Request</a>
+                                <a class="header-btn " [ngClass]="{'btn-border': currentUrl === '/create-request'}" [routerLink]="['/create-request']">Create Request</a> 
+                                <div class="header-mid_right-bar">
+                                    <div id="search-overlay-trigger" class="search-icon">
+                                        <a ><i class="fa fa-search"></i></a>
+                                    </div>
+                                </div> 
                             </div>
                         </div>
                     </div>
-
-                    <!-- Mobile Menu -->
-                    <div class="mobile-menu order-12 d-block d-lg-none col"></div>
-
                 </div>
             </div>
-        </div>
-        </ng-container>
-        <!-- Header Section End -->
-    </header>
 
+            
+            <!-- <div class="header-section section" >
+                <div class="container">
+                    <div class="row align-items-center">
+
+                        <div class="col-lg-2 col-6">
+                            <div class="header-logo">
+                                <a ><img src="https://www.amtrak.com/content/dam/projects/dotcom/english/public/images/logos/guest-rewards-logo.svg" height="50" width="300" alt=""></a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-10 col-6">
+                            <div class="header-mid_right-bar">
+                                <nav class="main-menu d-lg-block d-none">
+                                    <ul>
+                                        <li class="has-dropdown"><a>Home</a>
+                                            <ul class="sub-menu">
+                                                <li><a>Home one</a></li>
+                                                <li><a>Home two</a></li>
+                                                <li><a>Home three</a></li>
+                                                <li><a>Home Four</a></li>
+                                                <li><a>Home Five</a></li>
+                                                <li><a>Home Six</a></li>
+                                                <li><a>Home Seven</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-dropdown"><a>Services</a>
+                                            <ul class="sub-menu">
+                                                <li><a>Services</a></li>
+                                                <li><a>Single Services</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a>Features</a></li>
+                                        <li class="has-dropdown"><a href="#">Pages</a>
+                                            <ul class="sub-menu">
+                                                <li class="has-dropdown menu-item-has-children"><a>Blog Page</a>
+                                                    <ul class="sub-menu">
+                                                        <li><a>Blog Page</a></li>
+                                                        <li><a>Blog Left Sidebar</a></li>
+                                                        <li><a>Blog Right Sidebar</a></li>
+                                                        <li><a>Blog Details</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a>About Page</a></li>
+                                                <li><a>Create agency</a></li>
+                                                <li><a>Login Page</a></li>
+                                                <li><a>Register Page</a></li>
+                                            </ul>
+                                        </li>
+                                    
+                                        <li><a>Contact</a></li>
+                                    </ul>
+                                </nav>
+                                <div id="search-overlay-trigger" class="search-icon">
+                                    <a ><i class="fa fa-search"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="mobile-menu order-12 d-block d-lg-none col"></div>
+
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Header Section End -->
+        </header>
+    </ng-container>
 
     <!--  search overlay -->
-    <div class="search-overlay" id="search-overlay" style="z-index: 1;">
-
+    <div class="search-overlay" id="search-overlay" >
+        <!-- style="z-index: 1;" -->
         <div class="search-overlay__header">
             <div class="container-fluid">
                 <div class="row align-items-center">
